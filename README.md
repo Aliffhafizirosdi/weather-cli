@@ -1,94 +1,60 @@
-# Weather CLI
+# 🚀 Weather CLI
 
-A beautiful, lightweight command-line tool for checking current weather conditions and forecasts directly from your terminal. Built with Python and utilizes the OpenWeatherMap API.
+A fast, lightweight command-line weather application built with Python.
 
-This project was built to demonstrate command-line application structure, API integrations, and formatted terminal output in Python. It's a handy tool for developers who want to check the weather without leaving their terminal workspace.
+![Project Status](https://img.shields.io/badge/Status-Completed-success)
+![License](https://img.shields.io/badge/License-MIT-blue)
 
-## Features
+---
 
-- **Current Weather:** Get temperature, humidity, wind speed, pressure, and visibility
-- **Terminal Aesthetics:** Fully colorized output with terminal-friendly weather emojis
-- **Forecast:** Optional 24-hour forecast in a clean, readable table format
-- **Easy Setup:** Simple interactive setup for configuring your API key
-- **Fast:** Lightweight script that fetches and displays data instantly
+## 🌟 Features
 
-## How It Works
+- [x] Fetch real-time weather data\n- [x] Beautiful terminal output\n- [x] Supports multiple cities
 
-```mermaid
-flowchart TD
-    A[User runs 'python weather.py city'] --> B{API Key Exists?}
-    B -->|No| C[Prompt User for Key]
-    C --> D[Save Key Locally]
-    D --> E
-    B -->|Yes| E{Fetch Command}
-    E -->|Current Only| F[GET OpenWeatherMap Weather API]
-    E -->|--forecast| G[GET OpenWeatherMap Forecast API]
-    F --> H[Parse and Colorize Output]
-    G --> H
-    H --> I[Display in Terminal]
-```
+## 🛠️ Tech Stack
 
-## Getting Started
+- **Python**\n- **Requests API**
 
-### Prerequisites
+---
 
-- Python 3.6 or higher
-- pip (Python package list manager)
+## 🚀 How to Download & Run
 
-### Installation
+Follow these steps to set up the project on your local machine.
 
-```bash
-git clone https://github.com/Darkshaz/weather-cli.git
-cd weather-cli
-pip install -r requirements.txt
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Aliffhafizirosdi/weather-cli.git
+   ```
+2. Navigate to the directory:
+   ```bash
+   cd weather-cli
+   ```
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Run the script:
+   ```bash
+   python weather.py --city "Kuala Lumpur"
+   ```
+   *(Note: You may need to add your OpenWeather API key in the configuration)*
 
-### Initial Setup
+---
 
-Before using the tool for the first time, you need a free API key from OpenWeatherMap.
+## 💻 Code Structure
 
-1. Go to https://openweathermap.org/api and sign up for a free account
-2. Generate an API key
-3. Run the setup command:
+A quick overview of the main files in this repository:
 
-```bash
-python weather.py --setup
-```
+- `index.html` / `app.py` / `server.js` - Entry point of the application
+- `style.css` - Main stylesheet
+- `app.js` / `scripts/` - Main logic and interactions
 
-The tool will securely save your key to your home directory (`~/.weather_cli_key`).
+---
 
-## Usage
+## 👤 Author
 
-Check the weather for any city:
+**Aliff Hafizi**
+- Website: [aliffhafizi.my](https://www.aliffhafizi.my)
+- GitHub: [@Aliffhafizirosdi](https://github.com/Aliffhafizirosdi)
 
-```bash
-python weather.py London
-```
-
-For cities with spaces in the name, use quotes:
-
-```bash
-python weather.py "Kuala Lumpur"
-```
-
-Include a 24-hour forecast:
-
-```bash
-python weather.py Tokyo --forecast
-```
-
-View the help message:
-
-```bash
-python weather.py --help
-```
-
-## Tech Stack
-
-- **Language:** Python
-- **Libraries:** Requests (for API calls)
-- **Formatting:** ANSI color codes, text manipulation
-
-## License
-
-MIT License
+*If you found this project helpful, please consider giving it a ⭐ on GitHub!*
